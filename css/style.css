@@ -1,0 +1,66 @@
+/* Transition variables */
+/* Font variables */
+/* Color variables */
+body {
+  margin: 0 auto;
+}
+
+.line {
+  margin: 20px auto;
+  max-width: 400px;
+  height: 2px;
+  background-color: #ffd447;
+}
+
+section {
+  padding: 40px 0;
+}
+
+.jumbotron {
+  color: #ffd447;
+  background-color: #5e6973;
+  height: 30vh;
+  font-family: "Pacifico", cursive;
+}
+
+.playerBoard {
+  height: auto;
+  color: #5e6973;
+  font-family: "Open Sans Condensed", sans-serif;
+}
+
+.playerBoard .buttons .button {
+  margin: 40px auto;
+  padding: 10px 0;
+  width: 160px;
+  height: 160px;
+  font-family: "Quicksand", sans-serif;
+  color: #5e6973;
+  border: 2px solid #5e6973;
+  border-radius: 25px;
+  line-height: 80px;
+  transition: all 0.4s ease;
+}
+
+.playerBoard .buttons .button:hover {
+  background-color: #5e6973;
+  color: #ffd447;
+  font-weight: 700;
+  cursor: pointer;
+  transform: scale(1.1);
+  box-shadow: 2px 1px 23px 3px #000000;
+  border-color: #ffd447;
+}
+
+.result {
+  height: 400px;
+  background-color: #ffd447;
+  color: #5e6973;
+  font-family: "Quicksand", sans-serif;
+}
+
+footer {
+  height: 100px;
+  background-color: #5e6973;
+}
+/*# sourceMappingURL=style.css.map */

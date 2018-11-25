@@ -1,0 +1,76 @@
+/* Transition variables */
+$transition: all .4s ease;
+
+/* Font variables */
+$fontBlackhan: 'Quicksand', sans-serif;
+$fontOpen: 'Open Sans Condensed', sans-serif;
+$fontPacifico: 'Pacifico', cursive;
+
+/* Color variables */
+$white: #fff;
+$grey: #5e6973;
+$golden: #ffd447;
+
+body {
+	margin: 0 auto;
+} 
+
+.line {
+	margin: 20px auto;
+	max-width: 400px;
+	height: 2px;
+	background-color: $golden;
+}
+
+section {
+	padding: 40px 0;
+}
+
+.jumbotron {
+	color: $golden;
+	background-color: $grey;
+	height: 30vh;
+	font-family: $fontPacifico;
+}
+
+.playerBoard {
+	height: auto;
+	color: $grey;
+	font-family: $fontOpen;
+	.buttons {
+		.button {
+			margin: 40px auto;
+			padding: 10px 0;
+			width: 160px;
+			height: 160px;
+			font-family: $fontBlackhan;
+			color: $grey;
+			border: 2px solid #5e6973;
+			border-radius: 25px;
+			line-height: 80px;
+			transition: $transition;
+			&:hover {
+				background-color: #5e6973;
+				color: #ffd447;
+				font-weight: 700;
+				cursor: pointer;
+				transform: scale(1.1);
+				-webkit-box-shadow: 2px 1px 23px 3px #000000; 
+				box-shadow: 2px 1px 23px 3px #000000;
+				border-color: $golden;
+			}
+		}
+	}
+}
+
+.result {
+	height: 400px;
+	background-color: $golden;
+	color: $grey;
+	font-family: $fontBlackhan;
+}
+
+footer {
+	height: 100px;
+	background-color: $grey;
+}
