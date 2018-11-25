@@ -64,7 +64,7 @@ section {
 }
 
 .result {
-	height: 400px;
+	min-height: 400px;
 	background-color: $golden;
 	color: $grey;
 	font-family: $fontBlackhan;

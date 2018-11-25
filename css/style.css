@@ -53,7 +53,7 @@ section {
 }
 
 .result {
-  height: 400px;
+  min-height: 400px;
   background-color: #ffd447;
   color: #5e6973;
   font-family: "Quicksand", sans-serif;
