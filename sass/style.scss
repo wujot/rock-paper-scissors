@@ -22,6 +22,13 @@ body {
 	background-color: $golden;
 }
 
+.lineSmall {
+	margin: 20px auto;
+	max-width: 200px;
+	height: 2px;
+	background-color: $white;
+}
+
 section {
 	padding: 40px 0;
 }
@@ -68,6 +75,21 @@ section {
 	background-color: $golden;
 	color: $grey;
 	font-family: $fontBlackhan;
+	.output, .gameResult {
+		height: 200px;
+		border: 2px solid $white;
+		h1 {
+			margin: 0;
+			line-height: 200px;
+		}
+		h2 {
+			margin: 0;
+			line-height: 100px;
+		}
+		strong {
+			color: $white;
+		}
+	}
 }
 
 footer {

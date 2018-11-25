@@ -98,19 +98,17 @@ var printRound = function(turnp, turnc) {
 
 	var round = isWin(validateTurn(turnp), validateTurn(turnc));
 
-	return output.innerHTML = resultMessage(round) + '<br> You played ' + validateTurn(turnp) + ', Computer played ' + validateTurn(turnc) + '<br><br>' + output.innerHTML;
+	return output.innerHTML = '<h2>' + resultMessage(round) + '</h2<br><h3> You played ' + '<strong>' + validateTurn(turnp) + '</strong>' + '<br>' + 'Computer played ' + '<strong>' + validateTurn(turnc) + '</strong>' + '</h3>';
 }
 
 // Print game
 var printGame = function() {
-	return result.innerHTML ='<h1>' + pointsPlayer + ' / ' + pointsComputer + '</h1>';
+	return result.innerHTML ='<h1>Player ' + pointsPlayer + ' / ' + pointsComputer + ' Computer</h1>';
 }
 
 
 // Player move function
 var playerMove = function(playerTurn) {
-
-
 
 	playerTurn = playerTurn;
 	computerTurn = random(1, 3);
