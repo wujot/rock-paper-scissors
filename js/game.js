@@ -4,9 +4,12 @@
 var turn;
 var yourTurn;
 var computerTurn;
+var pointsPlayer = 0;
+var pointsComputer = 0;
 
 // Assign HTML elemets into variables
 var output = document.getElementById('output');
+var result = document.getElementById('result');
 var buttonRock = document.getElementById('rockButton');
 var buttonPaper = document.getElementById('paperButton');
 var buttonScissors = document.getElementById('scissorsButton');
@@ -61,35 +64,59 @@ var isWin = function(yourTurn, computerTurn) {
 }
 
 // Validate result
-var result = function(isWin) {
+var resultMessage = function(isWin) {
 
 	var message;
 
 	if (isWin == true) {
 		message = 'YOU WON';
+		pointsPlayer += 1;
 	}else if (isWin == false) {
 		message = 'YOU LOSE';
+		pointsComputer += 1;
 	}else {
 		message = 'DRAW';
 	}
 	return message;
 }
 
-// Print result
-var print = function(turnp, turnc) {
+
+// Points counter
+var pointsCounter = function(round) {
+
+	if (round == 'WON') {
+		pointsPlayer += 1;
+	}else if (round == 'LOSE') {
+		pointsComputer += 1;
+	}else {
+
+	}
+}
+
+// Print round
+var printRound = function(turnp, turnc) {
 
 	var round = isWin(validateTurn(turnp), validateTurn(turnc));
 
-	return output.innerHTML = result(round) + '<br> You played ' + validateTurn(turnp) + ', Computer played ' + validateTurn(turnc) + '<br><br>' + output.innerHTML;
+	return output.innerHTML = resultMessage(round) + '<br> You played ' + validateTurn(turnp) + ', Computer played ' + validateTurn(turnc) + '<br><br>' + output.innerHTML;
 }
+
+// Print game
+var printGame = function() {
+	return result.innerHTML ='<h1>' + pointsPlayer + ' / ' + pointsComputer + '</h1>';
+}
+
 
 // Player move function
 var playerMove = function(playerTurn) {
 
+
+
 	playerTurn = playerTurn;
 	computerTurn = random(1, 3);
 
-	return print(playerTurn, computerTurn);
+	printRound(playerTurn, computerTurn);
+	printGame();
 
 }
 
