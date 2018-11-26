@@ -4,4 +4,4 @@
  
  Project archive:
  
- https://www.dropbox.com/s/h1z9ix9i0jvpnwz/game.rar?dl=0
+ https://www.dropbox.com/s/h1z9ix9i0jvpnwz/game.rar?raw=1
