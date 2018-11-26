@@ -36,8 +36,27 @@ section {
 .jumbotron {
 	color: $golden;
 	background-color: $grey;
-	height: 30vh;
+	height: auto;
 	font-family: $fontPacifico;
+	.button {
+		margin: 0 auto;
+		margin-top: 40px;
+		width: 200px;
+		height: 60px;
+		line-height: 60px;
+		background: none;
+		color: $golden;
+		border: 2px solid $golden;
+		font-family: $fontOpen;
+		font-weight: bold;
+		letter-spacing: 5px;
+		transition: $transition;
+		&:hover {
+			background-color: $golden;
+			color: $grey;
+			cursor: pointer;
+		}
+	}
 }
 
 .playerBoard {
@@ -84,7 +103,11 @@ section {
 		}
 		h2 {
 			margin: 0;
-			line-height: 100px;
+			line-height: 50px;
+		}
+		h3 {
+			margin: 0;
+			line-height: 50px;
 		}
 		strong {
 			color: $white;
@@ -93,6 +116,15 @@ section {
 }
 
 footer {
-	height: 100px;
+	font-family: $fontOpen;
+	height: auto;
 	background-color: $grey;
+	.winRounds {
+		h1 {
+			color: $golden;
+			span {
+				color: $white;
+			}
+		}
+	}
 }

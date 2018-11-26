@@ -26,8 +26,29 @@ section {
 .jumbotron {
   color: #ffd447;
   background-color: #5e6973;
-  height: 30vh;
+  height: auto;
   font-family: "Pacifico", cursive;
+}
+
+.jumbotron .button {
+  margin: 0 auto;
+  margin-top: 40px;
+  width: 200px;
+  height: 60px;
+  line-height: 60px;
+  background: none;
+  color: #ffd447;
+  border: 2px solid #ffd447;
+  font-family: "Open Sans Condensed", sans-serif;
+  font-weight: bold;
+  letter-spacing: 5px;
+  transition: all 0.4s ease;
+}
+
+.jumbotron .button:hover {
+  background-color: #ffd447;
+  color: #5e6973;
+  cursor: pointer;
 }
 
 .playerBoard {
@@ -78,7 +99,12 @@ section {
 
 .result .output h2, .result .gameResult h2 {
   margin: 0;
-  line-height: 100px;
+  line-height: 50px;
+}
+
+.result .output h3, .result .gameResult h3 {
+  margin: 0;
+  line-height: 50px;
 }
 
 .result .output strong, .result .gameResult strong {
@@ -86,7 +112,16 @@ section {
 }
 
 footer {
-  height: 100px;
+  font-family: "Open Sans Condensed", sans-serif;
+  height: auto;
   background-color: #5e6973;
+}
+
+footer .winRounds h1 {
+  color: #ffd447;
+}
+
+footer .winRounds h1 span {
+  color: #fff;
 }
 /*# sourceMappingURL=style.css.map */
