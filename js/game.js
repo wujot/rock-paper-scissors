@@ -127,16 +127,16 @@ var clearGame = function() {
 
 // Player move function
 var playerMove = function(playerTurn) {
+	
+	won(pointsPlayer, pointsComputer, rounds);
 
 	if (finishRound == false) {
 		playerTurn = playerTurn;
 		computerTurn = random(1, 3);
 
-		won(pointsPlayer, pointsComputer, rounds);
-
 		printRound(playerTurn, computerTurn);
 		printGame();
-	}else
+	}else 
 		return false;
 }
 
