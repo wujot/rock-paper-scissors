@@ -127,7 +127,7 @@ var clearGame = function() {
 
 // Player move function
 var playerMove = function(playerTurn) {
-	
+
 	won(pointsPlayer, pointsComputer, rounds);
 
 	if (finishRound == false) {
@@ -178,15 +178,22 @@ buttonNewGame.addEventListener('click', function(){
 	// Prompt window
 	rounds = window.prompt('Type number of points to win the game:');
 
-	printRounds(rounds);
+	// Validate input then evalute if needed 
+	if(isNaN(rounds)) {
+		winRounds.innerHTML = '<h1>You must type a number.</h1><br><br>';
+	} else if(rounds == null) {
+		winRounds.innerHTML = '<h1>Canceled.</h1><br><br>';
+	} else 
+		
+		printRounds(rounds);
 
-	// Set New Game
-	finishRound = false;
-	pointsPlayer = 0;
-	pointsComputer = 0;
+		// Set New Game
+		finishRound = false;
+		pointsPlayer = 0;
+		pointsComputer = 0;
 
-	clearRound();
-	clearGame();
+		clearRound();
+		clearGame();
 	
 }); 
 
