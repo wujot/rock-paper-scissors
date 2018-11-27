@@ -26,62 +26,38 @@ var random = function(min, max) {
 // Validate Turn function
 var validateTurn = function(number) {
 
-	var turn;
-
 	if (number == 1) {
-		turn = 'ROCK';
+		return 'ROCK';
 	} else if(number == 2) {
-		turn = 'PAPER';
+		return 'PAPER';
 	} else {
-		turn = 'SCISSORS';
+		return 'SCISSORS';
 	}
-
-	return turn;
 }
 
 // Evaluate result
 var isWin = function(yourTurn, computerTurn) {
 
-	if (yourTurn == 'ROCK') {
-		if (computerTurn == 'PAPER') {
-			return false;
-		}else if (computerTurn == 'SCISSORS') {
-			return true;
-		}else 
-			return null;
-	}else if (yourTurn == 'PAPER') {
-		if (computerTurn == 'ROCK') {
-			return true;
-		}else if (computerTurn == 'SCISSORS') {
-			return false;
-		}else 
-			return null;
-	}else {
-		if (computerTurn == 'ROCK') {
-			return false;
-		}else if (computerTurn == 'PAPER') {
-			return true;
-		}else
-			return null;
-	}
-
+	if (yourTurn === computerTurn) {
+		return null;
+	}else if ((yourTurn == 'PAPER' && computerTurn == 'SCISSORS') || (yourTurn == 'ROCK' && computerTurn == 'PAPER') || (yourTurn == 'SCISSORS' && computerTurn == 'ROCK')){
+		return false;
+	} else
+		return true;
 }
 
 // Validate result
 var resultMessage = function(isWin) {
 
-	var message;
-
 	if (isWin == true) {
-		message = 'YOU WON';
 		pointsPlayer += 1;
+		return 'YOU WON';
 	}else if (isWin == false) {
-		message = 'YOU LOSE';
 		pointsComputer += 1;
+		return 'YOU LOSE';
 	}else {
-		message = 'DRAW';
+		return 'DRAW';
 	}
-	return message;
 }
 
 
