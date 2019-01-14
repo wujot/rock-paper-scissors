@@ -80,6 +80,10 @@ section {
   border-color: #ffd447;
 }
 
+.playerBoard .buttons .button.hide {
+  display: none;
+}
+
 .result {
   min-height: 400px;
   background-color: #ffd447;
@@ -123,5 +127,60 @@ footer .winRounds h1 {
 
 footer .winRounds h1 span {
   color: #fff;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.overlay.show {
+  display: block;
+}
+
+.modal {
+  display: none;
+  background: #fff;
+  width: 520px;
+  height: 500px;
+  position: absolute;
+  margin: 100px auto;
+  transform: translate3d(0, 0, 0);
+  border-radius: 3px;
+  border: 5px solid #5e6973;
+}
+
+.modal.show {
+  display: block;
+}
+
+.modal .close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 5px;
+  color: #000;
+  text-decoration: none;
+}
+
+.modal header {
+  font-size: 20px;
+  line-height: 30px;
+  min-height: 30px;
+  font-weight: bold;
+  padding: 0 30px;
+}
+
+.modal .content table {
+  margin: 20px auto;
+}
+
+.modal .content table th {
+  padding: 0 5px;
 }
 /*# sourceMappingURL=style.css.map */

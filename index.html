@@ -12,6 +12,63 @@
         <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Pacifico|Quicksand" rel="stylesheet"> 
 	</head>
 	<body>
+
+		<div class="overlay" id="modal-overlay">
+		    <div class="modal text-center" id="modal-one">
+		        <a href="#" class="close">x</a>
+		        <header>Game Result</header>
+		        <div class="content">
+		        	<div class="row">
+		        		<table>
+		        			<thead>
+		        				<tr>
+			        				<th>
+			        					Round Number
+			        				</th>
+			        				<th>
+			        					Player Turn
+			        				</th>
+			        				<th>
+			        					Computer Turn
+			        				</th>
+			        				<th>
+			        					Round Result
+			        				</th>
+			        			</tr>
+		        			</thead>
+		        			<tbody class="tableRow" id="tableRow">
+		        			
+		        			</tbody>
+		        		</table>
+					</div>
+					<div class="row">
+						<div class="gameResult" id="result">
+							
+						</div>
+					</div>
+					<div class="row">
+						<div class="winRounds" id="winRounds">
+							<h1>Click New Game Button !</h1>
+						</div>
+					</div>
+		        </div>
+		    </div>
+		    <div class="modal" id="modal-two">
+		        <a href="#" class="close">x</a>
+		        <header>Modal two</header>
+		        <div class="content">
+		            <p>Dolor sit amet!</p>
+		        </div>
+		    </div>
+		    <div class="modal" id="modal-three">
+		        <a href="#" class="close">x</a>
+		        <header>Modal three</header>
+		        <div class="content">
+		            <p>Dolor sit amet!</p>
+		        </div>
+		    </div>
+		</div>
+
 		<div class="jumbotron">
 			<div class="slogan text-center">
 				<h1>Rock Paper Scissors</h1>
@@ -31,19 +88,19 @@
 				</div>
 				<div class="row buttons">
 					<div class="col-sm-4">
-						<div class="button" id="rockButton">
+						<div class="button player-move" id="rockButton" data-move="rock">
 							<img id="rockIcon" src="images/rock.png" alt="rock">
 							<h3>Rock</h3>
 						</div>
 					</div>
 					<div class="col-sm-4">
-						<div class="button" id="paperButton">
+						<div class="button player-move" id="paperButton" data-move="paper">
 							<img id="paperIcon" src="images/paper.png" alt="paper">
 							<h3>Paper</h3>
 						</div>
 					</div>
 					<div class="col-sm-4">
-						<div class="button" id="scissorsButton">
+						<div class="button player-move" id="scissorsButton" data-move="scissors">
 							<img id="scissorsIcon" src="images/scissors.png" alt="scissors">
 							<h3>Scissors</h3>
 						</div>
@@ -56,7 +113,7 @@
 		<section class="result text-center">
 			<div class="container">
 				<div class="row">
-					<div class="col-sm-6">
+					<div class="col-sm-6 ">
 						<h2>Round Result</h2>
 						<div class="lineSmall">
 						</div>
@@ -68,13 +125,15 @@
 						<h2>Game Result</h2>
 						<div class="lineSmall">
 						</div>
-						<div class="gameResult" id="result">
+						<div class="gameResult " id="result">
 							
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
+
+
 
 		<!-- Footer -->
 		<footer class="page-footer text-center">
@@ -84,6 +143,7 @@
 				</div>
 			</div>
 		</footer>
+
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
